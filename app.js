@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')); // Serve static files from the public folder
 
 app.get('/', (req, res) => {
-    res.render("helo")
+    res.render("form")
 });
 
 app.post('/create-pdf', (req, res) => {
