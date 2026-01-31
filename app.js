@@ -61,7 +61,7 @@ app.get('/download/:file', (req, res) => {
 
     if (fs.existsSync(filePath)) {
         res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', 'inline'); // Open in browser
+        res.setHeader('Content-Disposition', 'inline');
         res.sendFile(filePath, (err) => {
             if (err) {
                 console.error('Error sending the file:', err);
